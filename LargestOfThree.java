@@ -17,7 +17,9 @@ public static void getIntsFromUser() {
     System.out.println("Enter your second number:");  
     second = myScanner.nextInt();  
     System.out.println("Enter your third number:");  
-    third = myScanner.nextInt();  
+    third = myScanner.nextInt();
+    // Closing the scanner to prevent resource leak
+    myScanner.close();
 
     makeComparison(first, second, third);
 }

@@ -15,6 +15,8 @@ public class MadnessWithMethods {
         // Create and use the scanner class, pulling the user's integer
         Scanner myScanner = new Scanner(System.in);
         int userInt = myScanner.nextInt();
+        // Close the scanner to prevent resource leak
+        myScanner.close();
         // Assign a static integer variable to compare against and to add later
         int staticInt = 50;
 
