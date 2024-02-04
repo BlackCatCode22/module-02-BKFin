@@ -3,28 +3,16 @@ import java.util.Scanner;
 public class ReversedStrings {
     public static void main(String[] args) {
 
-        System.out.println("Welcome to My Strings program");
-
-        // Create a Scanner object to get a string from the user.
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("\n Please enter a string of characters...\n");
-        String userInput = scanner.nextLine();
-
-        // Output the line to reverse.
-        System.out.println("\n\nThe string to reverse is: " + userInput + "\n\n");
-
-        // Strings are a data structure meaning we can access individual characters like this
-        char aCharFromAString = userInput.charAt(3);
-
-        System.out.println("\n\n aCharFromAString is " + aCharFromAString);
-
-        String reversedString = "";
-        for (int i = 0; i < userInput.length(); i++) {
-            System.out.println("\n  " + userInput.charAt(i) );
-            reversedString = userInput.charAt(i) + reversedString;
-        }
-
-        System.out.println("\n reversed Str = " + reversedString);
-
+        // Use the scanner class
+        Scanner myScanner = new Scanner(System.in);
+        System.out.println("\n\nType some text, please, and I'll reverse it!");
+        // Assign the scanner class input into the userText String variable
+        String userText = myScanner.nextLine();
+        // Use the StringBuffer class, passing the userText variable into a myStringBuffer variable
+        StringBuffer myStringBuffer = new StringBuffer(userText);
+        // Use the reverse function of the StringBuffer class to reverse the text on myStringBuffer
+        myStringBuffer.reverse();
+        // Output the reversed text to the screen
+        System.out.println("\nYour reversed text is: " + myStringBuffer.toString());
     }
 }
